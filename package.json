@@ -1,8 +1,8 @@
 {
-  "name": "tailwind-stencil-example",
+  "name": "tailwind-stencil-examples",
   "author": "Jag Reehal",
   "version": "0.0.1",
-  "description": "Tailwind Stencil Example",
+  "description": "Tailwind Stencil Examples",
   "scripts": {
     "build": "cross-env NODE_ENV=production stencil build --prerender",
     "serve": "serve www -p 5000",
