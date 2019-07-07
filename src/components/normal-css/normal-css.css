@@ -1,0 +1,7 @@
+.normal-greeting {
+  color: var(--greeting, #4299e1);
+}
+
+.normal-class {
+  @apply text-blue-500;
+}

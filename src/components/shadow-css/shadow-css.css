@@ -1,0 +1,9 @@
+:host {}
+
+.shadow-greeting {
+  @apply text-blue-500;
+}
+
+.shadow-class {
+  @apply text-blue-500;
+}

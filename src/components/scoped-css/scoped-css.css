@@ -1,0 +1,7 @@
+.scoped-greeting {
+  color: var(--greeting, #4299e1);
+}
+
+.scoped-class {
+  @apply text-blue-500;
+}

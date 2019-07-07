@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tailwind Stencil Example</title>
+    <meta name="Description" content="Tailwind Stencil Example" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <meta name="theme-color" content="#16161d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+
+    <script type="module" src="/build/app.esm.js"></script>
+    <script nomodule src="/build/app.js"></script>
+    <link href="/build/app.css" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" href="/assets/icon/icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <style>
+      :root {
+        --greeting: green;
+      }
+
+      .normal-greeting{
+        color: orange !important;
+      }
+
+      .normal-class{
+        color: orange !important;
+      }
+      .shadow-styled {
+        --greeting: red;
+      }
+
+      .hotpink {
+        color: hotpink;
+      }
+
+      .scoped-greeting{
+        color: orange !important;
+      }
+      .shadow-greeting{
+        color: orange !important;
+      }
+
+
+    </style>
+  </head>
+  <body class="antialiased min-h-screen p-10">
+    <div class="mb-8">
+      <normal-css
+        >
+          Normal CSS</span
+        ></normal-css
+      >
+    </div>
+    <div class="mb-8">
+      <scoped-css
+        >
+          The greeting is a variable</span
+        ></scoped-css
+      >
+    </div>
+    <div class="mb-8">
+      <shadow-css
+        >The greeting in shadow dom, but you can't override!</shadow-css
+      >
+    </div>
+    <div class="mb-8">
+      <shadow-css-using-variables class="shadow-styled"
+        >The greeting in shadow dom, but you can override!</shadow-css-using-variables
+      >
+    </div>
+    <div class="flex">
+      <div class="w-1/2 mr-2">
+        <themed-card card-title="Card Title" card-description="This is the card description">
+          This is the card body.
+        </themed-card>
+      </div>
+      <div class="w-1/2">
+        <themed-card class="dark" card-title="Card Title" card-description="This is the card description">
+          This is the card body.
+        </themed-card>
+      </div>
+    </div>
+
+  </body>
+</html>

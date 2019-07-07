@@ -1,0 +1,50 @@
+:host {}
+
+.c-card {
+  @apply max-w-sm rounded overflow-hidden shadow-lg;
+}
+
+.c-card__image {
+  @apply w-full;
+}
+
+.c-card__body {
+  @apply px-6 py-4;
+}
+
+.c-card__title {
+  @apply font-bold text-xl mb-2;
+}
+
+.c-card__description {
+  @apply text-gray-700;
+}
+
+.c-card__pills {
+  @apply px-6 py-4;
+}
+
+.c-card__pill {
+  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700;
+}
+
+.c-card__pill:not(:last-child) {
+  @apply mr-2
+}
+
+
+:host(.dark) .c-card {
+  @apply bg-black;
+}
+
+:host(.dark) .c-card__title {
+  @apply text-white;
+}
+
+:host(.dark) .c-card__description {
+  @apply text-gray-300;
+}
+
+:host(.dark) .c-card__pill {
+  @apply inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-200;
+}

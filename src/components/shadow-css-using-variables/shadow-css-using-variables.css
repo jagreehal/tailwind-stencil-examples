@@ -1,0 +1,9 @@
+:host {}
+
+.shadow-greeting {
+  color: var(--greeting, #4299e1);
+}
+
+.shadow-class {
+  @apply text-blue-500;
+}

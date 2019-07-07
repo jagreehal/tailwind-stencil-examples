@@ -1,0 +1,7 @@
+:root {
+  --color-primary: hotpink;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
