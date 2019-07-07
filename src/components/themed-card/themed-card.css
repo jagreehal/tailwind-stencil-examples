@@ -28,23 +28,35 @@
   @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700;
 }
 
+.c-card__pill:hover {
+  @apply bg-gray-700 text-gray-200;
+}
+
 .c-card__pill:not(:last-child) {
   @apply mr-2
 }
 
 
-:host(.dark) .c-card {
-  @apply bg-black;
-}
+:host(.dark) {
 
-:host(.dark) .c-card__title {
-  @apply text-white;
-}
+  .c-card {
+    @apply bg-black;
+  }
 
-:host(.dark) .c-card__description {
-  @apply text-gray-300;
-}
+  .c-card__title {
+    @apply text-white;
+  }
 
-:host(.dark) .c-card__pill {
-  @apply inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-200;
+  .c-card__description {
+    @apply text-gray-300;
+  }
+
+  .c-card__pill {
+    @apply inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-200;
+  }
+
+  .c-card__pill:hover {
+    @apply bg-gray-200 text-gray-700;
+  }
+
 }

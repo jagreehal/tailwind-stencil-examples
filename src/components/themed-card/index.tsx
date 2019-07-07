@@ -1,12 +1,14 @@
 import { Component, Prop, h } from '@stencil/core';
 
+const CardPill = ({ text }) => <span class="c-card__pill">#{text}</span>;
+
 @Component({
   tag: 'themed-card',
   styleUrl: 'themed-card.css',
   shadow: true
 })
 export class DumbCard {
-  @Prop() cardTitle: string;
+  @Prop() pills: string;
   @Prop() cardDescription: string;
 
   render() {
@@ -18,28 +20,19 @@ export class DumbCard {
           alt="Kitty!"
         />
         <div class="c-card__body">
-          <div class="c-card__title">The Coldest Sunset</div>
+          <div class="c-card__title">
+            <slot name="title" />
+          </div>
           <p class="c-card__description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
+            <slot />
           </p>
         </div>
         <div class="c-card__pills">
-          <span class="c-card__pill">#photography</span>
-          <span class="c-card__pill">#travel</span>
-          <span class="c-card__pill">#winter</span>
+          {this.pills
+            ? this.pills.split(',').map(text => <CardPill text={text} />)
+            : undefined}
         </div>
       </div>
     );
   }
 }
-// <div class="c-card">
-//   <header class="c-card__header">
-//     <h3 class="c-card__title">{this.cardTitle}</h3>
-//     <p class="c-card__description">{this.cardDescription}</p>
-//   </header>
-//   <div class="c-card__body">
-//     <slot />
-//   </div>
-// </div>;

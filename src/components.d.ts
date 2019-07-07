@@ -24,7 +24,7 @@ export namespace Components {
   }
   interface ThemedCard {
     'cardDescription': string;
-    'cardTitle': string;
+    'pills': string;
   }
 }
 
@@ -92,7 +92,7 @@ declare namespace LocalJSX {
   }
   interface ThemedCard extends JSXBase.HTMLAttributes<HTMLThemedCardElement> {
     'cardDescription'?: string;
-    'cardTitle'?: string;
+    'pills'?: string;
   }
 
   interface IntrinsicElements {
