@@ -8,12 +8,16 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 });
 
 export const config: Config = {
+  namespace: 'tailwind-stencil',
   globalStyle: 'src/global/app.css',
   outputTargets: [
     {
       type: 'www',
       serviceWorker: null,
       baseUrl: 'http://localhost:5000'
+    },
+    {
+      type: 'dist'
     }
   ],
   plugins: [
